@@ -1,0 +1,45 @@
+@model Market.Models.Product
+
+@{
+    ViewData["Title"] = "Add product";
+    Layout = "_AdminLayout";
+}
+
+<form method = "post" action="Add">
+
+<div class = "row">
+<div class = "col-md-10">
+    <label for="Name">Name</label>
+</div>
+<div class = "col-md-10">
+    <input asp-for="Name" type="text" >
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-10">
+    <label for="Cost">Cost</label>
+</div>
+<div class = "col-md-10">
+    <input asp-for="Cost" type="number" >
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-10">
+    <label for="Category">Category</label>
+</div>
+<div class = "col-md-10">
+    <select class="form-control form-control-lg" name="CategoryId" id="CategoryId" asp-for="CategoryId" >
+        @foreach (var item in ViewBag.Category)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+</div>
+</div><br>
+<div class = "row">
+<div class = "col-md-10">
+    <input type="submit" class=" btn btn-primary" value="Add">
+</div>
+</div>
+
+</form>

@@ -20526,8 +20526,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Shared/_ClientLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_ClientLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Shared/_AdminLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Admin/Change.cshtml",
+      "TargetPath": "Views\\Admin\\Change.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20536,8 +20551,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Admin/Delete.cshtml",
+      "TargetPath": "Views\\Admin\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20551,8 +20566,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Admin/Categories.cshtml",
+      "TargetPath": "Views\\Admin\\Categories.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Admin/Add.cshtml",
+      "TargetPath": "Views\\Admin\\Add.cshtml",
       "FileKind": "mvc"
     }
   ],

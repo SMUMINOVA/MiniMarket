@@ -1,0 +1,53 @@
+@model Market.Models.Product
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "_AdminLayout";
+}
+
+<form method = "post" action="Change">
+    
+<div class = "row">
+<div class = "col-md-10">
+    <label for="Id">Id</label>
+</div>
+<div class = "col-md-10">
+    <input asp-for="Id" type="number" >
+</div>
+</div><br>
+   <div class = "row">
+<div class = "col-md-10">
+    <label for="Name">Name</label>
+</div>
+<div class = "col-md-10">
+    <input asp-for="Name" type="text" >
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-10">
+    <label for="Cost">Cost</label>
+</div>
+<div class = "col-md-10">
+    <input asp-for="Cost" type="number" >
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-10">
+    <label for="Category">Category</label>
+</div>
+<div class = "col-md-10">
+    <select class="form-control form-control-lg" name="CategoryId" asp-for="CategoryId" >
+        @foreach (var item in ViewBag.Category)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+</div>
+</div><br>
+<div class = "row">
+<div class = "col-md-10">
+    <input type="submit" class=" btn btn-primary" value="Change">
+</div>
+</div>
+
+</form>
