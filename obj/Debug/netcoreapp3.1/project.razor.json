@@ -20541,6 +20541,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Home/GetAdress.cshtml",
+      "TargetPath": "Views\\Home\\GetAdress.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Admin/Change.cshtml",
       "TargetPath": "Views\\Admin\\Change.cshtml",
       "FileKind": "mvc"
@@ -20553,6 +20558,11 @@
     {
       "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Admin/Delete.cshtml",
       "TargetPath": "Views\\Admin\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Home/Trash.cshtml",
+      "TargetPath": "Views\\Home\\Trash.cshtml",
       "FileKind": "mvc"
     },
     {

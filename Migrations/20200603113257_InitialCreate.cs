@@ -20,6 +20,22 @@ namespace Market.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Trashs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ProductsName = table.Column<string>(nullable: false),
+                    ProductsCost = table.Column<double>(nullable: false),
+                    Adress = table.Column<string>(nullable: true),
+                    DeliveryTime = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Trashs", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -85,6 +101,9 @@ namespace Market.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Trashs");
 
             migrationBuilder.DropTable(
                 name: "Categories");

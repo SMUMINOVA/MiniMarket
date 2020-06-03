@@ -31,17 +31,28 @@ namespace Market.Controllers
             ViewBag.Categories = _context.Categories.ToList();            
             return View(p);
         }
-        
-        public IActionResult Trash(){
+        [HttpGet]
+        public IActionResult TrashView(){
+            var prod = _context.Trashs.ToList();
             return View();
         }
-        public async Task<IActionResult> Trash(int Id){
+        [HttpPost("Id")]
+        public async Task<IActionResult> AddToTrash(int Id){
             var p = await _context.Products.FindAsync(Id);
             var t = new Trash();
-            t.Products.Add(p);
-            _context.TrashP.Add(t);
+            t.ProductsName = p.Name;
+            t.ProductsCost = p.Cost;          
+            _context.Trashs.Add(t);
             if(await _context.SaveChangesAsync() > 0){
-                return RedirectToAction("Products");
+                return View("GetAdress", t);
+            }
+            return BadRequest();
+        }
+        [HttpPost("Id")]
+        public async Task<IActionResult> GetAdress(Trash t, int Id){
+            var p = _context.Trashs.Find(Id);
+            if(await _context.SaveChangesAsync() > 0){
+                return RedirectToAction("Trash");
             }
             return BadRequest();
         }

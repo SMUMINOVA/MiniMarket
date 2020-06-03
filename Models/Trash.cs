@@ -1,10 +1,16 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Market.Models
 {
     public class Trash
     {
         public int Id{get;set;}
-        public List<Product> Products{get;set;} = new List<Product>();
+        [Required(ErrorMessage ="Name can't be empty")]
+        public string ProductsName{get;set;}
+        [Required(ErrorMessage ="Cost can't be empty")]
+        public double ProductsCost{get;set;}
+        public string Adress{get;set;}
+        public string DeliveryTime{get;set;}
     }
 }
