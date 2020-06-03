@@ -5,6 +5,6 @@ namespace Market.Models
     public class Trash
     {
         public int Id{get;set;}
-        public List<Product> Products{get;set;}
+        public List<Product> Products{get;set;} = new List<Product>();
     }
 }

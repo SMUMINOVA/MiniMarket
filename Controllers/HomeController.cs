@@ -11,27 +11,39 @@ namespace Market.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public DataContext _context;
+        public HomeController(DataContext context)
         {
-            _logger = logger;
+            _context = context;
         }
-
-        public IActionResult Index()
-        {
+        public IActionResult Index(){
             return View();
         }
-
-        public IActionResult Privacy()
-        {
+        [HttpGet]
+        public IActionResult Products(){
+            var p = _context.Products.ToList();
+            ViewBag.Categories = _context.Categories.ToList();            
+            return View(p);
+        }        
+        [HttpPost]
+        public IActionResult Products(int Id){
+            var p = _context.Products.Where(x => x.CategoryId == Id).Select(x=>x).ToList();
+            ViewBag.Categories = _context.Categories.ToList();            
+            return View(p);
+        }
+        
+        public IActionResult Trash(){
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public async Task<IActionResult> Trash(int Id){
+            var p = await _context.Products.FindAsync(Id);
+            var t = new Trash();
+            t.Products.Add(p);
+            _context.TrashP.Add(t);
+            if(await _context.SaveChangesAsync() > 0){
+                return RedirectToAction("Products");
+            }
+            return BadRequest();
         }
     }
 }

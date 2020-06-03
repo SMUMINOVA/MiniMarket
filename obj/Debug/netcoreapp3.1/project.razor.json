@@ -20571,6 +20571,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Home/Products.cshtml",
+      "TargetPath": "Views\\Home\\Products.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/sobira/Рабочий стол/c#/Market/Views/Admin/Add.cshtml",
       "TargetPath": "Views\\Admin\\Add.cshtml",
       "FileKind": "mvc"

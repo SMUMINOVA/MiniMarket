@@ -61,12 +61,10 @@
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.TagHelpers.output.cache
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.RazorCoreGenerate.cache
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
-/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
-/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.RazorTargetAssemblyInfo.cache
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.RazorTargetAssemblyInfo.cs
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.Views.pdb
@@ -76,3 +74,10 @@
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.dll
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.pdb
 /home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Market.genruntimeconfig.cache
+/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Add.cshtml.g.cs
+/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Categories.cshtml.g.cs
+/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Change.cshtml.g.cs
+/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Delete.cshtml.g.cs
+/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Home/Products.cshtml.g.cs
+/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_AdminLayout.cshtml.g.cs
+/home/sobira/Рабочий стол/c#/Market/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ClientLayout.cshtml.g.cs
