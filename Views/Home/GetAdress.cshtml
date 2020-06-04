@@ -3,10 +3,9 @@
 @{
     ViewData["Title"] = "Buy";
     Layout = "_ClientLayout";
-    int Id = Model.Id;
 }
 
-<form method = "post" asp-route-Id="Id" asp-action="GetAdress">
+<form method = "post" asp-route-Id="@ViewBag.TrashId" asp-action="GetAdress">
 
 <div class = "row">
 <div class = "col-md-10">
@@ -18,10 +17,18 @@
 </div>
 <div class = "row">
 <div class = "col-md-10">
-    <label for="DeliveryTime">DeliveryTime</label>
+    <label for="DeliveryTime">Delivery Time</label>
 </div>
 <div class = "col-md-10">
     <input asp-for="DeliveryTime" type="text" >
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-10">
+    <label for="PhoneNumber">Phone Number</label>
+</div>
+<div class = "col-md-10">
+    <input asp-for="PhoneNumber" type="text" >
 </div>
 </div>
 <div class = "row">

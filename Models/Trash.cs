@@ -12,5 +12,6 @@ namespace Market.Models
         public double ProductsCost{get;set;}
         public string Adress{get;set;}
         public string DeliveryTime{get;set;}
+        public string PhoneNumber{get;set;}
     }
 }

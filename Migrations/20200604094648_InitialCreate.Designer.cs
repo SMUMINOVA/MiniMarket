@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Market.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200603113257_InitialCreate")]
+    [Migration("20200604094648_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -101,6 +101,9 @@ namespace Market.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DeliveryTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PhoneNumber")
                         .HasColumnType("TEXT");
 
                     b.Property<double>("ProductsCost")

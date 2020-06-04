@@ -101,6 +101,9 @@ namespace Market.Migrations
                     b.Property<string>("DeliveryTime")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("TEXT");
+
                     b.Property<double>("ProductsCost")
                         .HasColumnType("REAL");
 

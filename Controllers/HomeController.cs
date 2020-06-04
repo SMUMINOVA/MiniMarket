@@ -34,15 +34,17 @@ namespace Market.Controllers
         [HttpGet]
         public IActionResult TrashView(){
             var prod = _context.Trashs.ToList();
-            return View();
+            return View(prod);
         }
-        [HttpPost("Id")]
-        public async Task<IActionResult> AddToTrash(int Id){
+        //[HttpPost("Id")]
+        public async Task<IActionResult> Trash(int Id){
             var p = await _context.Products.FindAsync(Id);
             var t = new Trash();
             t.ProductsName = p.Name;
             t.ProductsCost = p.Cost;          
             _context.Trashs.Add(t);
+            t = (from x in _context.Trashs orderby x.Id descending select x).FirstOrDefault();
+            ViewBag.TrashId = t.Id;
             if(await _context.SaveChangesAsync() > 0){
                 return View("GetAdress", t);
             }
@@ -50,9 +52,12 @@ namespace Market.Controllers
         }
         [HttpPost("Id")]
         public async Task<IActionResult> GetAdress(Trash t, int Id){
-            var p = _context.Trashs.Find(Id);
+            var trashes = await _context.Trashs.FindAsync(Id);
+            trashes.Adress = t.Adress;
+            trashes.DeliveryTime = t.DeliveryTime;
+            trashes.PhoneNumber = t.PhoneNumber;
             if(await _context.SaveChangesAsync() > 0){
-                return RedirectToAction("Trash");
+                return RedirectToAction("TrashView");
             }
             return BadRequest();
         }

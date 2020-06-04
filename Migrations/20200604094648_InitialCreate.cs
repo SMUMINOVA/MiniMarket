@@ -28,7 +28,8 @@ namespace Market.Migrations
                     ProductsName = table.Column<string>(nullable: false),
                     ProductsCost = table.Column<double>(nullable: false),
                     Adress = table.Column<string>(nullable: true),
-                    DeliveryTime = table.Column<string>(nullable: true)
+                    DeliveryTime = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
