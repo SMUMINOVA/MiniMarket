@@ -43,9 +43,9 @@ namespace Market.Controllers
             t.ProductsName = p.Name;
             t.ProductsCost = p.Cost;          
             _context.Trashs.Add(t);
-            t = (from x in _context.Trashs orderby x.Id descending select x).FirstOrDefault();
-            ViewBag.TrashId = t.Id;
             if(await _context.SaveChangesAsync() > 0){
+                t = (from x in _context.Trashs orderby x.Id descending select x).FirstOrDefault();
+                ViewBag.TrashId = t.Id;
                 return View("GetAdress", t);
             }
             return BadRequest();
